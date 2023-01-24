@@ -23,7 +23,7 @@ public class Conta {
         this.correntista = correntista;
     }
 
-    public void creditar(BigDecimal credito) throws NegocioException {
+    public void creditar(BigDecimal credito) {
         if (isNull(credito)){
             obrigatorio("Valor crédito");
         }
@@ -35,16 +35,16 @@ public class Conta {
         saldo = saldo.add(credito);
     }
 
-    public void debitar(BigDecimal debito) throws NegocioException {
+    public void debitar(BigDecimal debito) {
         if (isNull(debito)){
-            obrigatorio("Valor debito");
+            obrigatorio("Valor débito");
         }
 
         if (debito.compareTo(BigDecimal.ZERO) <= 0){
-            obrigatorio("Valor debito");
+            obrigatorio("Valor débito");
         }
 
-        if (debito.compareTo(debito) > 0){
+        if (debito.compareTo(saldo) > 0){
             saldoInsuficiente();
         }
 
