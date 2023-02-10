@@ -11,4 +11,9 @@ module conta.sistema {
 
     // expondo adaptadores de saídas (driven)
     exports conta.adaptador;
+
+    //expondo testes
+    exports teste.unidade.dominio.modelo;
+    exports teste.unidade.dominio.servico;
+    exports teste.casouso;
 }
