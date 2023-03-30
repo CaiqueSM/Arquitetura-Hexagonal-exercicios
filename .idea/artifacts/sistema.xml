@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sistema">
+    <output-path>$PROJECT_DIR$/out/artifacts/sistema</output-path>
+    <root id="archive" name="sistema.jar">
+      <element id="module-output" name="sistema" />
+      <element id="module-source" name="sistema" />
+    </root>
+  </artifact>
+</component>
